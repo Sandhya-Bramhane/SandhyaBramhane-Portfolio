@@ -1,0 +1,396 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  padding-top: 56px; /* Adjust this value if needed */
+  overflow: auto; /* Allow scrolling */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  z-index: -1; /* Place the video behind all other content */
+}
+
+/* Hero Section styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.771), rgba(0, 0, 0, 0.8)), url('path/to/your-background.jpg') no-repeat center center/cover;
+  color: #fffbfb;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .profile-photo {
+  width: 170px;
+  height: 200px;
+  border-radius: 40%;
+  border: 6px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.hero .profile-photo:hover {
+  transform: scale(1.1); /* Slightly enlarges the photo */
+}
+
+.hero .btn-primary {
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.hero .btn-primary:hover {
+  background-color: #ffba00;
+  color: #ffeb0a;
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+.hero .social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem; /* Space between icons */
+}
+
+.hero .social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.hero .social-icon:hover {
+  color: #ffba00; /* Hover color */
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays above other content */
+  background: linear-gradient(45deg, #11203c, #0c0c0c);
+  border-bottom: 3px solid #ffdd57;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #910b0b;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  transition: color 0.3s, background 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffdd57;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 43%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #ffdd57; }
+}
+
+.typing-effect {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #ffdd57;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffdd57;
+  width: 0; /* Initial width is 0 to start the typing effect */
+  animation: typing 3s steps(40, end) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+.small-text{
+  color: #7d7ec2;
+}
+
+/* About Page */
+.about-page {
+  padding: 5rem 3rem;
+  background: linear-gradient(45deg, #1e3c72, #0c0c0c);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-page h2 {
+  font-size: 2rem;
+  color: #f2f2f2;
+  margin-bottom: 1rem;
+}
+
+.about-page p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #ffffff;
+  transition: color 0.3s; /* Smooth transition */
+}
+
+.about-page p:hover {
+  color: #ffdd57; /* Change text color on hover */
+}
+
+.about-page .social-icons {
+  margin-top: 1.5rem;
+}
+
+.about-page .social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.about-page .social-icons a:hover {
+  color: #ff6f61;
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+/* Education Page */
+.education-page {
+  padding: 5rem 3rem;
+  background: linear-gradient(45deg, #1e3c72, #0c0c0c);
+  border-radius: 10px;
+}
+
+.education-page h2 {
+  font-size: 2rem;
+  color: #fbfbfb;
+  margin-bottom: 1rem;
+}
+
+.education-page .education-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.education-page .education-item:hover {
+  background: #f0f0f0; /* Light grey background on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.02); /* Slightly enlarges the item */
+}
+
+.education-page .education-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.education-page .education-item p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Skills Page */
+.skills-page {
+  padding: 5rem 3rem;
+  background: linear-gradient(45deg, #1e3c72, #0c0c0c);
+  border-radius: 10px;
+}
+
+.skills-page h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.skills-page .skill {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.skills-page .skill:hover {
+  background: #f9f9f9; /* Light background on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.02); /* Slightly enlarges the skill card */
+}
+
+.skills-page .skill h3 {
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+.skills-page .skill p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Projects Page */
+.projects-page {
+  padding: 5rem 3rem;
+  background: linear-gradient(45deg, #1e3c72, #0c0c0c);
+  border-radius: 10px;
+}
+
+.projects-page h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.projects-page .project-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.projects-page .project-card:hover {
+  background: #f9f9f9; /* Light background on hover */
+  border-color: #ddd; /* Slightly darken the border color */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.02); /* Slightly enlarges the card */
+}
+
+.projects-page .project-card h3 {
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+.projects-page .project-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Experience Page */
+.experience-page {
+  padding: 5rem 3rem;
+  background: linear-gradient(45deg, #1e3c72, #0c0c0c);
+  border-radius: 10px;
+}
+
+.experience-page h2 {
+  font-size: 2rem;
+  color: #fbfbfb;
+  margin-bottom: 1rem;
+}
+
+.experience-page .experience-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.experience-page .experience-item:hover {
+  background: #f0f0f0; /* Light grey background on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.02); /* Slightly enlarges the item */
+}
+
+.experience-page .experience-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.experience-page .experience-item p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Certificates/Awards Page */
+.certificates-page {
+  padding: 5rem 3rem;
+  background: linear-gradient(45deg, #1e3c72, #0c0c0c);
+  border-radius: 10px;
+}
+
+.certificates-page h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.certificates-page li {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  transition: background 0.3s, color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.certificates-page li:hover {
+  background: #2a2a2a; /* Darker background on hover */
+  color: #ffdd57; /* Change text color on hover */
+  transform: scale(1.02); /* Slightly enlarges the item */
+}
+
+.certificates-page li h3 {
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+.certificates-page li p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #1e3c72;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  transition: color 0.3s; /* Smooth transition */
+}
+
+footer p:hover {
+  color: #ffdd57; /* Change text color on hover */
+}
